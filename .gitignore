@@ -1,0 +1,9 @@
+/.idea/
+/dist/
+/build/
+/setup.py.orig
+/kairos-vision.egg-info/
+/mlruns/
+/kairos_vision.egg-info/
+/docs/_build/*
+mlruns
