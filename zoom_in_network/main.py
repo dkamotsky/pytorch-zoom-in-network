@@ -5,31 +5,24 @@ Created on 2022-03-12
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
-import time
 import torch
-import shutil
 import argparse
-import warnings
 import numpy as np
-import pandas as pd
-from math import floor, sqrt
-from skimage.io import imsave
 import torch.nn as nn
-from torch.nn import functional as F
-from zoom_in.zoom_in import ZoomInNet
-from utils.dataset_utils import load_annotations
-from utils.utils import get_optim
-from utils.utils import save_checkpoint, load_checkpoint, save_metrics, load_metrics, get_activation
+from .zoom_in.zoom_in import ZoomInNet
+from .utils.dataset_utils import load_annotations
+from .utils.utils import get_optim
+from .utils.utils import load_checkpoint
 
-from dataset.custom_dataset import CustomDataReader
-from dataset.colon_cancer_dataset import HistoPatchwiseReader
+from .dataset.custom_dataset import CustomDataReader
+from .dataset.colon_cancer_dataset import HistoPatchwiseReader
 
-from models.attention_models import Attention, AttentionOnAttention
-from models.feature_extractors import FeatureExtractor
-from models.classifier import Classifier
+from .models.attention_models import Attention, AttentionOnAttention
+from .models.feature_extractors import FeatureExtractor
+from .models.classifier import Classifier
 
-from train import train
-from eval import eval
+from .train import train
+from .eval import eval
 
 torch.set_default_tensor_type('torch.cuda.FloatTensor')
 
