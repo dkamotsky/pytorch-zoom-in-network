@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='pytorch-zoom-in-network',
-    packages=find_packages(where='..', include=['pytorch-zoom-in-network']),
+    packages=find_packages(exclude=['data']),
     setup_requires=['wheel'],
     install_requires=[
         'opencv-python>=4.5,<4.6'
