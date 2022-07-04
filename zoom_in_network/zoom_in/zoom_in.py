@@ -80,7 +80,7 @@ class ZoomInNet(nn.Module):
         '''
         Helper function to sample without replacement
         '''
-        size_img = DataReader.get_size()
+        size_img = DataReader.size()
         frame_size = self.frame_size 
         patch_size = self.patch_size
         x = np.arange(0, size_img[0], frame_size[0])
