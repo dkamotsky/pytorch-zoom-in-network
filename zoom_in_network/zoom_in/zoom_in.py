@@ -1,29 +1,11 @@
-import torch 
-import tqdm
-import torch.nn as nn 
-from matplotlib import pyplot as plt
-# Need kind of clean up my code
-import os
-import time
+import torch.nn as nn
 import torch
-import random
-import shutil
-import argparse
-import warnings
 import numpy as np
-import pandas as pd
-from cv2 import imread
-from math import floor, sqrt
-from skimage.io import imsave
-from itertools import zip_longest
 from torch.nn import functional as F
-import torch.distributions as dist
 from torch.distributions import Multinomial
-from regularizer import MultinomialRegularizer
-from core_utils import SamplingPatches
-from layers import ExpectationWithoutReplacement, ExpectationWithReplacement
-from ..models.attention_models import Attention, AttentionOnAttention
-from ..models.feature_extractors import FeatureExtractor, Classifier
+from .regularizer import MultinomialRegularizer
+from .core_utils import SamplingPatches
+from .layers import ExpectationWithoutReplacement, ExpectationWithReplacement
 
 
 def attention_inference_weights(attention):
