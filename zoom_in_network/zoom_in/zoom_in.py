@@ -19,10 +19,11 @@ from itertools import zip_longest
 from torch.nn import functional as F
 import torch.distributions as dist
 from torch.distributions import Multinomial
-from utils import MultinomialRegularizer, NCAMPatchwiseReader
+from regularizer import MultinomialRegularizer
+from core_utils import SamplingPatches
 from layers import ExpectationWithoutReplacement, ExpectationWithReplacement
-from sampling import _sample_without_replacement, _sample_with_replacement
-from networks import Attention, AttentionOnAttention, FeatureExtractor, Classifier
+from ..models.attention_models import Attention, AttentionOnAttention
+from ..models.feature_extractors import FeatureExtractor, Classifier
 
 
 def attention_inference_weights(attention):
