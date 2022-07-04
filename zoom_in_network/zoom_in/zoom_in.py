@@ -17,7 +17,6 @@ from math import floor, sqrt
 from skimage.io import imsave
 from itertools import zip_longest
 from torch.nn import functional as F
-from new_utils import SamplingPatchesV2
 import torch.distributions as dist
 from torch.distributions import Multinomial
 from utils import MultinomialRegularizer, NCAMPatchwiseReader
